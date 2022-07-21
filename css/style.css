@@ -20,7 +20,7 @@ header {
     display: flex;
     background-color: #161616;
     border-radius: 25px;
-    height: 600px;
+    min-height: 600px;
 
 }
 
@@ -344,6 +344,20 @@ Button Box Style
     margin: 10px;
     color: #B9B9B9;
 }
+.viewall-btn{
+    text-align: center;
+    margin: 30px 0;
+    display: none;
+}
+.viewall-btn>button{
+    padding: 15px 60px;
+    border-radius: 8px;
+    background-color: #DD0000;
+    color: white;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
 /* ----------------
 Footer icon style 
 -----------------*/
@@ -361,20 +375,123 @@ Footer icon style
 /*-------------------------
      Media Queries
 ---------------------------*/
-
-/* Tablet Device */
-
-
-/* Mobile Deivces */
-
-
-@media only screen and (max-width:688px){
-    .header-contant{
+ /* Mobile deivce */
+      @media screen and (max-width: 480px) {
+        header{
+            margin: 2px 4px;
+            padding: 10px;
+        }
+ 
+        .header-contant {
+            display: flex;
+            flex-direction: column;
+            padding:0 20px;
+            padding-top: 20px;
+            
+        
+        }
+        .container {
+           
+            padding: 0;
+        
+        }
+       .header-title{
+        font-size: 24px;
+        text-align: center;
+       }
+       .header-details{
+        text-align: center;
+       }
+       .banner-image{
         width: 100%;
-        flex-direction: column;
+        margin-right: 0;
+        height: auto;
+        margin-top: 0;
+       }
+       /* main part  */
+       .players-container{
+       flex-direction: column;
+       }
+       .players-box{
+        grid-template-columns: repeat(1,1fr);
+        margin: 0px;
+       }
+       .btn-box{
+        margin-bottom: 10px;
+       }
+       .players-container{
+        margin: 5px;
+       }
+       /* footer part start */
+         .ftr-pera{
+            flex-direction: column;
+         }
+         .btn-wraper{
+            text-align: center;
+         }
     }
-    .players-box{
-    
-        grid-template-columns: repeat(1, 1fr);
-    }
+               /* Tablet Device */
+    @media only screen and (min-width:481px) and (max-width:768px){
+      
+ 
+        .header-contant {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            
+            padding:0 20px;
+           
+            
+        
+        }
+        .container {
+           
+            padding: 0;
+        
+        }
+       .header-title{
+         font-size: 34px;
+        
+        
+       }
+      
+       .banner-image{
+        width: 100%;
+        margin-right: 0;
+        height: auto;
+        margin-top: 0;
+       }
+       /* main part  */
+       .players-container{
+       flex-direction: column;
+       align-items: flex-start;
+       }
+       .players-box{
+        grid-template-columns: repeat(2,1fr);
+        margin: 0px;
+        width: 100%;
+       }
+       .btn-box{
+        margin-bottom: 10px;
+        background: none;
+        width: 100%;
+       }
+       .btn2{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 10px;
+        width: 100%;
+        height: auto;
+       }
+       .players-container{
+        margin: 5px;
+       }
+       /* footer part start */
+         .ftr-pera{
+            flex-direction: column;
+         }
+         .viewall-btn{
+           
+            display: block;
+        }
+        
     }
