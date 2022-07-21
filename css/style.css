@@ -361,3 +361,20 @@ Footer icon style
 /*-------------------------
      Media Queries
 ---------------------------*/
+
+/* Tablet Device */
+
+
+/* Mobile Deivces */
+
+
+@media only screen and (max-width:688px){
+    .header-contant{
+        width: 100%;
+        flex-direction: column;
+    }
+    .players-box{
+    
+        grid-template-columns: repeat(1, 1fr);
+    }
+    }
